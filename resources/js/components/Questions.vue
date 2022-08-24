@@ -54,7 +54,7 @@ export default {
                         },
                         {
                             id: 4,
-                            answer: 'Interrupt and explain that you are sreally busy at the moment',
+                            answer: 'Interrupt and explain that you are really busy at the moment',
                         }
                     ]
                 }
