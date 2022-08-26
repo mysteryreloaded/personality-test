@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [WelcomeController::class, 'index']);
+Route::get('/', [MainController::class, 'index'])->name('index');
+Route::get('/question/create', [MainController::class, 'create'])->name('create');
+Route::post('/store', [MainController::class, 'questionStore'])->name('question.store');
+Route::post('/destroy', [MainController::class, 'destroy'])->name('destroy');
+
+Route::post('/question/{id}/store', [MainController::class, 'answerStore'])->name('answer.store');
+Route::post('/finish', [MainController::class, 'finish'])->name('finish');
