@@ -22,6 +22,7 @@
 <script>
     export default {
         name: 'Questions',
+        emits: ['back-to-menu'],
         props: {
             questionsData: {
                 type: Array,
